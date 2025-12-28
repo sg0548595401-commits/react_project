@@ -1,10 +1,17 @@
 {
+<<<<<<< HEAD
+=======
+  "name": "my-helpdesk-client",
+  "version": "0.1.0",
+  "private": true,
+>>>>>>> e6d9a8372df0bfe919f54babd60453ee08c07e4b
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.6",
     "@mui/material": "^7.3.6",
     "@reduxjs/toolkit": "^2.11.2",
+<<<<<<< HEAD
     "@types/socket.io-client": "^1.4.36",
     "axios": "^1.13.2",
     "react-hook-form": "^7.69.0",
@@ -21,5 +28,55 @@
     "@types/react-dom": "^19.2.3",
     "@types/react-redux": "^7.1.34",
     "@types/use-sync-external-store": "^1.5.0"
+=======
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.126",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "axios": "^1.13.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-hook-form": "^7.69.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.30.2",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.8.3",
+    "sweetalert2": "^11.26.17",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-redux": "^7.1.34",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/socket.io-client": "^1.4.36"
+>>>>>>> e6d9a8372df0bfe919f54babd60453ee08c07e4b
   }
 }

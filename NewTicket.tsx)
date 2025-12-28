@@ -1,0 +1,39 @@
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { Container, Paper, TextField, Button, Typography, Box } from '@mui/material';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store';
+import { useNavigate } from 'react-router-dom';
+
+const NewTicket: React.FC = () => {
+  const { register, handleSubmit } = useForm();
+  const { token } = useSelector((state: RootState) => state.auth);
+  const navigate = useNavigate();
+
+  const onSubmit = async (data: any) => {
+    try {
+      await axios.post('http://localhost:4000/api/tickets', data, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      navigate('/tickets');
+    } catch (err) {
+      alert('שגיאה בפתיחת הטיקט');
+    }
+  };
+
+  return (
+    <Container maxWidth="sm" sx={{ mt: 5 }}>
+      <Paper sx={{ p: 4, borderRadius: 3 }}>
+        <Typography variant="h5" sx={{ mb: 3 }} align="right">פתיחת קריאה חדשה</Typography>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <TextField fullWidth label="נושא" {...register('title')} sx={{ mb: 2 }} />
+          <TextField fullWidth multiline rows={4} label="תיאור הבעיה" {...register('description')} sx={{ mb: 2 }} />
+          <Button fullWidth variant="contained" type="submit" size="large">שלח קריאה למוקד</Button>
+        </form>
+      </Paper>
+    </Container>
+  );
+};
+
+export default NewTicket;
